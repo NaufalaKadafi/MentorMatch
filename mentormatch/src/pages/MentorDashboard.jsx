@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API = 'http://localhost:5000/api';
+const API = 'https://respectful-benevolence-production-5f4e.up.railway.app/api';
 
 const MentorDashboard = () => {
   const [bookings, setBookings] = useState([]);

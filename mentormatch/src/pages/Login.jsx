@@ -15,7 +15,7 @@ const Login = () => {
 
     // Coba login admin dulu
     try {
-      const res  = await fetch('http://localhost:5000/api/auth/login-admin', {
+      const res  = await fetch('https://respectful-benevolence-production-5f4e.up.railway.app/api/auth/login-admin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ whatsapp, password }),
@@ -31,7 +31,7 @@ const Login = () => {
 
     // Kalau bukan admin, coba login mentor
     try {
-      const res  = await fetch('http://localhost:5000/api/auth/login', {
+      const res  = await fetch('https://respectful-benevolence-production-5f4e.up.railway.app/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ whatsapp, password }),

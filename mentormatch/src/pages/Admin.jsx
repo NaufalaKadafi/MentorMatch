@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const API = 'http://localhost:5000/api';
+const API = 'https://respectful-benevolence-production-5f4e.up.railway.app/api';
 const emptyForm   = { name: '', skill: '', price: '', image: '', whatsapp: '' };
 const emptyCsForm = { name: '', role: '', whatsapp: '' };
 

@@ -7,7 +7,7 @@ const Explore = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/mentors')
+    fetch('https://respectful-benevolence-production-5f4e.up.railway.app/api/mentors')
       .then(res => res.json())
       .then(data => setMentors(data))
       .catch(err => console.error('Gagal fetch mentor:', err));
@@ -54,7 +54,7 @@ const Explore = () => {
               const studentName = e.target[0].value;
               const sessions    = e.target[1].value;
               try {
-                const res = await fetch('http://localhost:5000/api/bookings', {
+                const res = await fetch('https://respectful-benevolence-production-5f4e.up.railway.app/api/bookings', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({

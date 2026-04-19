@@ -4,7 +4,7 @@ const Contact = () => {
   const [customerServices, setCustomerServices] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/cs')
+    fetch('https://respectful-benevolence-production-5f4e.up.railway.app/api/cs')
       .then(r => r.json())
       .then(data => setCustomerServices(data.map(cs => ({
         ...cs,
