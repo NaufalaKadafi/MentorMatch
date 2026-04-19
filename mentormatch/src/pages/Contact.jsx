@@ -1,26 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Contact = () => {
-  const customerServices = [
-    {
-      name: "Muhammad Sulthon Dzaki",
-      role: "Head of Support",
-      whatsapp: "6289634250920",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sulthon"
-    },
-    {
-      name: "Muhammad Kadafi Naufalla",
-      role: "Technical Consultant",
-      whatsapp: "628975700332",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Kadafi"
-    },
-    {
-      name: "Leksa Alfiyora",
-      role: "Student Coordinator",
-      whatsapp: "6285367303503",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Leksa"
-    }
-  ];
+  const [customerServices, setCustomerServices] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/api/cs')
+      .then(r => r.json())
+      .then(data => setCustomerServices(data.map(cs => ({
+        ...cs,
+        image: `https://api.dicebear.com/7.x/avataaars/svg?seed=${cs.avatar_seed}`
+      }))))
+      .catch(() => {});
+  }, []);
 
   const defaultMsg = encodeURIComponent("Halo, saya butuh bantuan!");
 

@@ -45,15 +45,28 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION 4: EDUCATORS (Gambar 5 - Video Cards) */}
-      <section className="educators-section">
-        <h2>Educators Committed to Your Growth</h2>
-        <div className="video-grid">
-          <VideoCard name="Ravisha Gudwani" info="Math Educator, 10+ Years" />
-          <VideoCard name="Kritika Sharma" info="English Educator, 6+ Years" />
-          <VideoCard name="Jagrat Savita" info="Math Educator, 7+ Years" />
-        </div>
-      </section>
+      {/* SECTION 4: EDUCATORS */}
+<section className="educators-section">
+  <h2>Educators Committed to Your Growth</h2>
+  <div className="video-grid">
+    {/* Ganti /videos/hero.mp4 dengan nama file videomu yang ada di folder public/videos/ */}
+    <VideoCard 
+      name="temereks anaks DKV RJ45 and sisikumalasisi palak siring" 
+      info="Math Educator, 1+ Month" 
+      videoSrc="/videos/hero-video1.mp4" 
+    />
+    <VideoCard 
+      name="paris anak gadis mannak kesayangan ibu-ibu" 
+      info="English Educator, 2+ Weeks" 
+      videoSrc="/videos/hero-video2.mp4" 
+    />
+    <VideoCard 
+      name="rayyanza queenzy (ADMIN)" 
+      info="Database Specialist, 1+ Years" 
+      videoSrc="/videos/hero-video3.mp4" 
+    />
+  </div>
+</section>
 
       {/* SECTION 5: REVIEWS (Gambar 3) */}
       <section className="review-section">
@@ -64,9 +77,9 @@ const Home = () => {
           <a href="https://maps.app.goo.gl/j41B96xuBk5Z3sdS6" target="_blank" style={{color: '#2563eb', fontWeight: 'bold'}}>📍 View on map</a>
         </div>
         <div className="review-grid">
-          <ReviewCard text="Ms. Harshita is a fantastic teacher. She strikes the perfect balance." author="Mrs. Ahmed" />
-          <ReviewCard text="Great teaching, I definitely recommend Muskan for physics." author="Shamma Alfa" />
-          <ReviewCard text="The 1:1 sessions helped my child gain so much confidence." author="Salamah Alsh..." />
+          <ReviewCard text="Ms. Temereks dan Sisikumalasisi benar-benar sangat pandai dalam mengajar matematika. walaupun anak saya sering kali mengeluh bahwa semua yang mereka ajarkan tidak pernah dipakai dalam pelajaran anak kelas 4 SD. anak saya mengaku bahwa dia hanya diajarkan bagaimana cara yang baik dan benar dalam menghitung bobot sawit dengan nilai pasaran saat ini, tapi tidak apa saya puas." author="bapak Hermensius" />
+          <ReviewCard text="mr. paris begitu bijak dalam mengajar dan sangat konsisten serta sabar, kebetulan anak saya sedang mengikuti tes untuk mengambil doktor dan anak saya alhamdulillah setelah diajar oleh mr. paris sekarang dia sudah bisa berpidato selayaknya pemimpin negara 'we wok de tok, not onli tok de tok' terima kasih banyak mr. paris" author="Dian ******" />
+          <ReviewCard text="saya bersyukur memiliki guru seperti mr. rayyanza, beliau mengajarkan saya bagaimana cara mengerjakan database dengan metode slow living, yaitu dikerjakan saat h-1 dikumpulkan, sehingga database tidak sempat dimasukkan ke dalam laporan, tapi metode itu sangatlah bijak dan cerdas, aku cinta mr. rayyanza" author="Sulthon Dzaki" />
         </div>
       </section>
 
@@ -74,9 +87,9 @@ const Home = () => {
       <section className="success-stories">
         <h2>Success Stories</h2>
         <div className="wa-grid">
-          <div className="wa-bubble">💬 "She got an A-! ❤️❤️❤️"</div>
-          <div className="wa-bubble">💬 "First time she got full marks!"</div>
-          <div className="wa-bubble">💬 "I got the highest mark in class! 😍"</div>
+          <div className="wa-bubble">💬 "Anakku berhasil masuk OXFORD UNIVERSITY!!!"</div>
+          <div className="wa-bubble">💬 "Anakku telah menjadi public speaker yang hebat!"</div>
+          <div className="wa-bubble">💬 "Aku berhasil diterima di perusahaaan APPLE!"</div>
         </div>
       </section>
     </div>
@@ -93,9 +106,20 @@ const FormulaCard = ({ step, icon, title, bg }) => (
   </div>
 );
 
-const VideoCard = ({ name, info }) => (
+const VideoCard = ({ name, info, videoSrc }) => (
   <div className="v-card">
-    <div className="v-thumb">▶ Play Video</div>
+    <div className="v-thumb" style={{ padding: '0', overflow: 'hidden', background: '#000' }}>
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline 
+        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+      >
+        <source src={videoSrc} type="video/mp4" />
+        Browser tidak mendukung video.
+      </video>
+    </div>
     <h4>{name}</h4>
     <p style={{color: '#6b7280', fontSize: '0.9rem'}}>{info}</p>
   </div>

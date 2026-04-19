@@ -16,10 +16,7 @@ const Navbar = () => {
         <Link to="/contact">Contact Person</Link>
         {/* Halaman Lisensi Baru */}
         <Link to="/license" className="license-link">Verified License</Link>
-      </div>
-
-      <div className="nav-auth">
-        {/* Tombol lama dihapus sesuai perintah */}
+        <Link to="/login" style={{ marginLeft: '16px', padding: '9px 20px', borderRadius: '8px', background: '#111827', color: '#fff', fontWeight: '700', fontSize: '0.875rem', textDecoration: 'none' }}>Login</Link>
       </div>
     </nav>
   );
