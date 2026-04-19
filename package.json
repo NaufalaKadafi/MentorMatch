@@ -5,7 +5,10 @@
   "name": "mentormatch",
   "version": "1.0.0",
   "description": "",
-  "main": "vite.config.js",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
   "dependencies": {
     "array-union": "^2.1.0",
     "async": "^3.2.6",
@@ -56,9 +59,6 @@
     "to-regex-range": "^5.0.1",
     "trim-repeated": "^1.0.0",
     "universalify": "^2.0.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
