@@ -53,17 +53,17 @@ const Home = () => {
     <VideoCard 
       name="temereks anaks DKV RJ45 and sisikumalasisi palak siring" 
       info="Math Educator, 1+ Month" 
-      videoSrc="/videos/hero-video1.mp4" 
+      videoSrc={`${import.meta.env.BASE_URL}videos/hero-video1.mp4`}
     />
-    <VideoCard 
-      name="paris anak gadis mannak kesayangan ibu-ibu" 
-      info="English Educator, 2+ Weeks" 
-      videoSrc="/videos/hero-video2.mp4" 
+    <VideoCard
+      name="paris anak gadis mannak kesayangan ibu-ibu"
+      info="English Educator, 2+ Weeks"
+      videoSrc={`${import.meta.env.BASE_URL}videos/hero-video2.mp4`}
     />
-    <VideoCard 
-      name="rayyanza queenzy (ADMIN)" 
-      info="Database Specialist, 1+ Years" 
-      videoSrc="/videos/hero-video3.mp4" 
+    <VideoCard
+      name="rayyanza queenzy (ADMIN)"
+      info="Database Specialist, 1+ Years"
+      videoSrc={`${import.meta.env.BASE_URL}videos/hero-video3.mp4`}
     />
   </div>
 </section>

@@ -7,7 +7,7 @@ const MentorCard = ({ mentor, onBookingClick }) => {
 
   return (
     <div className="m-card">
-      <img src={`/${mentor.image}`} alt={mentor.name} className="mentor-img" />
+      <img src={`${import.meta.env.BASE_URL}${mentor.image}`} alt={mentor.name} className="mentor-img" />
       <div className="m-info">
         <h3>{mentor.name}</h3>
         <span className="m-skill">{mentor.skill}</span>
